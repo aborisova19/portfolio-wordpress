@@ -13,21 +13,9 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<div class="copyright">
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( '© 2020 ab-codes.com' );
-				?>
+				<p><?php print( '© Designed & developed by Anna Borisova 2020' ); ?></p>
 			</div>
 		</div><!-- .site-info -->
-
-		<div class="back-top">
-			<a href="<?php echo home_url(); ?>">
-				<button>
-					<i class="fas fa-angle-up"></i>
-				
-				</button> <!-- back to top button -->
-			</a>
-		</div>
 		
 	</footer><!-- #colophon -->
 

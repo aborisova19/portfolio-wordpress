@@ -37,8 +37,10 @@
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('active');
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
+			button.classList.add('active');
 		}
 	} );
 
@@ -49,6 +51,7 @@
 		if ( ! isClickInside ) {
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('active');
 		}
 	} );
 
@@ -95,5 +98,7 @@
 			}
 			menuItem.classList.toggle( 'focus' );
 		}
-	}
+	}	
+
 }() );
+
