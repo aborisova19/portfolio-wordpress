@@ -14,23 +14,26 @@ get_header();
 
 		<section class="error-404 not-found">
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ab-portfolio' ); ?></h1>
+				
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ab-portfolio' ); ?></p>
+				<h1 class="page-title"><?php esc_html_e( '404', 'ab-portfolio' ); ?></h1>	
+				
+				<p><?php esc_html_e( 'Oh, noo! It looks like you&rsquo;re lost...', 'ab-portfolio' ); ?></p>
+				<button><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Go back home</a></button>
+				
+					<?php /*
+					get_search_form(); */
 
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
+					/*the_widget( 'WP_Widget_Recent_Posts' );*/
 					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ab-portfolio' ); ?></h2>
+					
+					<!-- <div class="widget widget_categories">
+						<h2 class="widget-title"><?php /* esc_html_e( 'Most Used Categories', 'ab-portfolio' ); */ ?></h2>
 						<ul>
 							<?php
-							wp_list_categories(
+							/* wp_list_categories(
 								array(
 									'orderby'    => 'count',
 									'order'      => 'DESC',
@@ -38,23 +41,23 @@ get_header();
 									'title_li'   => '',
 									'number'     => 10,
 								)
-							);
+							); */
 							?>
 						</ul>
-					</div><!-- .widget -->
+					</div> --> <!-- .widget -->
 
 					<?php
 					/* translators: %1$s: smiley */
-					$ab_portfolio_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ab-portfolio' ), convert_smilies( ':)' ) ) . '</p>';
+					/* $ab_portfolio_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ab-portfolio' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$ab_portfolio_archive_content" );
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
+					the_widget( 'WP_Widget_Tag_Cloud' ); */ 
 					?>
 
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+			</div> <!-- .page-content -->
+		</section> <!-- .error-404 -->
 
-	</main><!-- #main -->
+	</main> <!-- #main -->
 
 <?php
 get_footer();
